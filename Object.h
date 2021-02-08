@@ -48,6 +48,17 @@ public:
 		return nullptr;
 	}
 
+	template<class T>
+	T* TryAddComponent()
+	{
+		 T* result = this->GetComponent<T>();
+
+		if (result == nullptr) {
+			result = this->AddComponent<T>();
+		}
+		return result;
+	}
+
 public:
 	string Name = "";
 	Tag Tag = Tag::Default;
