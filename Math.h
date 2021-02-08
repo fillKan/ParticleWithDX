@@ -11,4 +11,6 @@ namespace Math
 	float Distance(Vector2 vector);
 	float Distance(Vector2 from, Vector2 to);
 	float Direction(Vector2 from, Vector2 to);
+
+	void SetAlpha(D3DCOLOR& color, float alpha);
 }

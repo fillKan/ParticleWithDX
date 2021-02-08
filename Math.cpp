@@ -58,3 +58,8 @@ float Math::Direction(Vector2 from, Vector2 to)
 
 	return atan2(detween.y, detween.x);
 }
+
+void Math::SetAlpha(D3DCOLOR& color, float alpha)
+{
+	color = (color & 0x00ffffff) | (D3DCOLOR(255 * alpha) << 24);
+}
