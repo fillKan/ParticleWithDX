@@ -14,12 +14,14 @@ void SampleScene::Init()
 	IMAGE->AddAnimation("PlayerIdle", *animation);
 
 	animator->Add("PlayerIdle");
-
-	OBJECT->NewObject("RectBoom", ONE, Tag::Default)->AddComponent<RectBoom>();
 }
 
 void SampleScene::Update()
 {
+	if (INPUT->GetKeyDown(VK_SPACE))
+	{
+		OBJECT->NewObject("RectBoom", Vector2(WINSIZE_X / 2, WINSIZE_Y / 2), Tag::Default)->AddComponent<RectBoom>();
+	}
 }
 
 void SampleScene::Render()

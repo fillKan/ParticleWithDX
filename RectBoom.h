@@ -13,7 +13,8 @@ public:
 
 private:
 	Renderer* m_Renderer;
-
 	Texture* m_Texture;
+
+	float m_Alpha;
 };
 
