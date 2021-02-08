@@ -53,6 +53,7 @@ enum Tag
 #include "ObjectManager.h"
 
 #include "Animation.h"
+#include "Timer.h"
 
 #include "Component.h"
 #include "Transform.h"

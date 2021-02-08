@@ -75,6 +75,9 @@
     <Filter Include="Component\Script">
       <UniqueIdentifier>{8016ae3f-90a2-49ef-a269-5bfd4bd306a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Module\Timer">
+      <UniqueIdentifier>{d1d6ef41-f1f1-494d-b936-efb6867448bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -210,6 +213,9 @@
     <ClCompile Include="RectBoom.cpp">
       <Filter>Component\Script</Filter>
     </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Module\Timer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -288,6 +294,9 @@
     </ClInclude>
     <ClInclude Include="RectBoom.h">
       <Filter>Component\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Module\Timer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
