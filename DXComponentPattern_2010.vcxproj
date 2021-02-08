@@ -403,6 +403,7 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="Playable.cpp" />
+    <ClCompile Include="RectBoom.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -426,6 +427,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Playable.h" />
+    <ClInclude Include="RectBoom.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />
