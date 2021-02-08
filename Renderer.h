@@ -13,6 +13,7 @@ public:
 	virtual void OnAnimationEnd(string key) override;
 
 public:
+	Transform* OwnerTransform;
 	Texture* Image;
 	D3DCOLOR Color = 0xffffffff;
 	Vector2 Pivot = HALF;
