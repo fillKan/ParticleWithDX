@@ -25,8 +25,8 @@ using Matrix = D3DXMATRIX;
 using Sound  = LPDIRECTSOUNDBUFFER;
 
 const Vector2 ZERO = Vector2( 0,  0);
-const Vector2 UP   = Vector2( 0,  1);
-const Vector2 DOWN = Vector2( 0, -1);
+const Vector2 UP   = Vector2( 0, -1);
+const Vector2 DOWN = Vector2( 0,  1);
 const Vector2 LEFT = Vector2(-1,  0);
 const Vector2 RIGHT= Vector2( 1,  0);
 const Vector2 ONE  = Vector2( 1,  1);
@@ -60,3 +60,4 @@ enum Tag
 #include "CircleCollider.h"
 #include "Renderer.h"
 #include "Animator.h"
+#include "Playable.h"

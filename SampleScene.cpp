@@ -6,6 +6,7 @@ void SampleScene::Init()
 	Object* player = OBJECT->NewObject("Player", Vector2(WINSIZE_X / 2, WINSIZE_Y / 2), Tag::Player);
 
 	player->AddComponent<Renderer>();
+	player->AddComponent<Playable>();
 	Animator* animator = player->AddComponent<Animator>();
 
 	Animation* animation = new Animation(0.1f);
