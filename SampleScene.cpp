@@ -14,6 +14,8 @@ void SampleScene::Init()
 	IMAGE->AddAnimation("PlayerIdle", *animation);
 
 	animator->Add("PlayerIdle");
+
+	OBJECT->NewObject("RectBoom", ONE, Tag::Default)->AddComponent<RectBoom>();
 }
 
 void SampleScene::Update()
