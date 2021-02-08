@@ -55,6 +55,8 @@ enum Tag
 #include "Animation.h"
 #include "Timer.h"
 
+#include "Particle.h"
+
 #include "Component.h"
 #include "Transform.h"
 #include "BoxCollider.h"

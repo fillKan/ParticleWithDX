@@ -78,6 +78,9 @@
     <Filter Include="Module\Timer">
       <UniqueIdentifier>{d1d6ef41-f1f1-494d-b936-efb6867448bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{bc865067-27a7-4245-8bc3-84df330aa87b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -216,6 +219,9 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Module\Timer</Filter>
     </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -297,6 +303,9 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Module\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Particle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
