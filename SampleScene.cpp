@@ -18,6 +18,10 @@ void SampleScene::Init()
 
 void SampleScene::Update()
 {
+	if (INPUT->GetKeyDown(VK_SPACE))
+	{
+		PARTICLE->CreateParticle(ParticleName::RectBoom, false, Vector2(WINSIZE_X / 2, WINSIZE_Y / 2), 3);
+	}
 }
 
 void SampleScene::Render()

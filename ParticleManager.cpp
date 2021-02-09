@@ -66,7 +66,7 @@ Particle* ParticleManager::CreateParticle(ParticleName name, bool isFront, Vecto
 	auto find = m_ParticleDic.find(name);
 	if (find != m_ParticleDic.end())
 	{
-		instance = find->second->Instantiat(position);
+		instance = find->second->Instantiat(position, scale);
 
 		if (isFront)
 		{
