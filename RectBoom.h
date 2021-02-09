@@ -1,20 +1,15 @@
 #pragma once
-class RectBoom : public Component
+class RectBoom : public Particle
 {
 public:
-	virtual void Init   () override;
-	virtual void Update () override;
-	virtual void Render () override;
-	virtual void Release() override;
+	virtual void Init  (float  lifeTime) override;
+	virtual void Update(float deltaTime) override;
 
-	virtual void OnAlarm(string key) override;
-	virtual void OnCollision(Object* other) override;
-	virtual void OnAnimationEnd(string key) override;
+	virtual void Render   () override;
+	virtual void Release  () override;
+	virtual bool IsDestroy() override;
 
 private:
-	Renderer* m_Renderer;
-	Texture* m_Texture;
-
 	float m_Alpha;
 };
 

@@ -1,36 +1,33 @@
 #include "DXUT.h"
 #include "RectBoom.h"
 
-void RectBoom::Init()
+void RectBoom::Init(float lifeTime)
 {
 	m_Alpha = 1;
-	m_Renderer = Owner->TryAddComponent<Renderer>();
+	
+	m_Transform = new Transform();
+	m_Transform->Init();
 
+	m_Renderer = new Renderer();
 	m_Renderer->Init();
+
 	m_Renderer->Image = IMAGE->AddImage("RectBoom", "./Assets/RectBoom/WhiteBoom.png");
-	Owner->GetTransform()->Scale = ONE * 3;
+	m_Transform->Scale = ONE * 3;
 }
 
-void RectBoom::Update()
+void RectBoom::Update(float deltaTime)
 {
-	float deltaTime = DeltaTime;
-
-	m_Alpha = Clamp(m_Alpha - deltaTime * 0.5f, 0, 1);
+	m_Alpha = Clamp(m_Alpha - deltaTime * Speed, 0, 1);
 	SetAlpha(m_Renderer->Color, m_Alpha);
 
-	if (Owner->GetTransform()->Scale.x < 0)
+	if (m_Transform->Scale.x < 0)
 	{
-		Owner->GetTransform()->Scale -= deltaTime * ONE * 3;
+		m_Transform->Scale -= deltaTime * ONE * 3;
 	}
 	else
-		Owner->GetTransform()->Scale -= deltaTime * ONE * 5;
+		m_Transform->Scale -= deltaTime * ONE * 5;
 
-	Owner->GetTransform()->Rotation += deltaTime;
-
-	if (m_Alpha == 0)
-	{
-		Owner->IsDestroyed = true;
-	}
+	m_Transform->Rotation += deltaTime;
 }
 
 void RectBoom::Render()
@@ -42,14 +39,7 @@ void RectBoom::Release()
 {
 }
 
-void RectBoom::OnAlarm(string key)
+bool RectBoom::IsDestroy()
 {
-}
-
-void RectBoom::OnCollision(Object* other)
-{
-}
-
-void RectBoom::OnAnimationEnd(string key)
-{
+	return m_Alpha <= 0;
 }

@@ -81,6 +81,9 @@
     <Filter Include="Particle">
       <UniqueIdentifier>{bc865067-27a7-4245-8bc3-84df330aa87b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\RectBoom">
+      <UniqueIdentifier>{435623c4-f396-40eb-a152-2a45a5beaac9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -213,14 +216,14 @@
     <ClCompile Include="Playable.cpp">
       <Filter>Component\Script</Filter>
     </ClCompile>
-    <ClCompile Include="RectBoom.cpp">
-      <Filter>Component\Script</Filter>
-    </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>Module\Timer</Filter>
     </ClCompile>
     <ClCompile Include="Particle.cpp">
       <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="RectBoom.cpp">
+      <Filter>Particle\RectBoom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -298,14 +301,14 @@
     <ClInclude Include="Playable.h">
       <Filter>Component\Script</Filter>
     </ClInclude>
-    <ClInclude Include="RectBoom.h">
-      <Filter>Component\Script</Filter>
-    </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>Module\Timer</Filter>
     </ClInclude>
     <ClInclude Include="Particle.h">
       <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="RectBoom.h">
+      <Filter>Particle\RectBoom</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
