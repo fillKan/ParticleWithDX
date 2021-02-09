@@ -87,6 +87,9 @@
     <Filter Include="Component\Script\MostimaBoom">
       <UniqueIdentifier>{5031bb18-23be-4100-97d9-a5b78503932f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\Twinkle">
+      <UniqueIdentifier>{ae7eb833-8576-4ad6-90b1-2d2ea5a085dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -237,6 +240,9 @@
     <ClCompile Include="MostimaBoom.cpp">
       <Filter>Component\Script\MostimaBoom</Filter>
     </ClCompile>
+    <ClCompile Include="Twinkle.cpp">
+      <Filter>Particle\Twinkle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -330,6 +336,9 @@
     </ClInclude>
     <ClInclude Include="MostimaBoom.h">
       <Filter>Component\Script\MostimaBoom</Filter>
+    </ClInclude>
+    <ClInclude Include="Twinkle.h">
+      <Filter>Particle\Twinkle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

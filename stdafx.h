@@ -54,6 +54,7 @@ enum Tag
 #include "ParticleRenderer.h"
 #include "Particle.h"
 #include "ParticleManager.h"
+#include "Twinkle.h"
 #include "Mostima.h"
 #include "Object.h"
 #include "ObjectManager.h"

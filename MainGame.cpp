@@ -4,6 +4,7 @@
 #include "SampleScene.h"
 
 #include "Mostima.h"
+#include "Twinkle.h"
 
 void MainGame::Init()
 {
@@ -22,6 +23,7 @@ void MainGame::Init()
 	SCENE->LoadScene("SampleScene");
 
 	PARTICLE->RegisteParticle(ParticleName::Mostima, new Mostima());
+	PARTICLE->RegisteParticle(ParticleName::Twinkle, new Twinkle());
 }
 
 void MainGame::Update()
