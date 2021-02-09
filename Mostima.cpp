@@ -11,7 +11,7 @@ void Mostima::Init()
 	m_Renderer = new ParticleRenderer();
 	m_Renderer->Init(m_Transform);
 
-	m_Renderer->Image = IMAGE->AddImage("RectBoom", "./Assets/RectBoom/WhiteBoom.png");
+	m_Renderer->Image = IMAGE->AddImage("WhiteSquare_Hollow", "./Assets/Particle/WhiteSquare_Hollow.png");
 }
 
 void Mostima::Update(float deltaTime)
