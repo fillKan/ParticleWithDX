@@ -2,7 +2,7 @@
 #include "Particle.h"
 
 Particle::Particle() : 
-	Speed(1), m_Transform(nullptr), m_Renderer(nullptr), m_Timer(0, false)
+	m_Transform(nullptr), m_Renderer(nullptr), m_Timer(0, false)
 {
 	
 }
@@ -18,7 +18,7 @@ Transform* Particle::GetTransform()
 	return m_Transform;
 }
 
-Renderer* Particle::GetRenderer()
+ParticleRenderer* Particle::GetRenderer()
 {
 	return m_Renderer;
 }

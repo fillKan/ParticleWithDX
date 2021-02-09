@@ -17,14 +17,11 @@ public:
 	virtual Particle* Instantiat(Vector2 position = ZERO, float scale = 1) PURE;
 
 	Transform* GetTransform();
-	Renderer * GetRenderer();
-
-public:
-	float Speed;
+	ParticleRenderer* GetRenderer();
 
 protected:
 	Transform* m_Transform;
-	Renderer * m_Renderer;
+	ParticleRenderer* m_Renderer;
 
 	Timer m_Timer;
 };

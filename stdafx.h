@@ -51,6 +51,7 @@ enum Tag
 #include "TagCollection.h"
 #include "Animation.h"
 #include "Timer.h"
+#include "ParticleRenderer.h"
 #include "Particle.h"
 #include "ParticleManager.h"
 #include "Object.h"
