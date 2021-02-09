@@ -49,13 +49,12 @@ enum Tag
 #include "SceneManager.h"
 #include "ImageManager.h"
 #include "TagCollection.h"
-#include "Object.h"
-#include "ObjectManager.h"
-
 #include "Animation.h"
 #include "Timer.h"
-
 #include "Particle.h"
+#include "ParticleManager.h"
+#include "Object.h"
+#include "ObjectManager.h"
 
 #include "Component.h"
 #include "Transform.h"

@@ -3,6 +3,8 @@
 
 #include "SampleScene.h"
 
+#include "RectBoom.h"
+
 void MainGame::Init()
 {
 	IMAGE->CreateInstance();
@@ -12,11 +14,14 @@ void MainGame::Init()
 
 	CAMERA->CreateInstance();
 	OBJECT->CreateInstance();
-	
+
+	PARTICLE->CreateInstance();
 	SCHEDULE->CreateInstance();
 
 	SCENE->AddScene(new SampleScene);
 	SCENE->LoadScene("SampleScene");
+
+	PARTICLE->RegisteParticle(ParticleName::RectBoom, new RectBoom());
 }
 
 void MainGame::Update()
@@ -24,6 +29,7 @@ void MainGame::Update()
 	INPUT->Update();
 	SCENE->Update();
 	OBJECT->Update();
+	PARTICLE->Update();
 	SOUND->Update();
 	CAMERA->Update();
 	SCHEDULE->Update();
@@ -35,7 +41,9 @@ void MainGame::Render()
 
 	CAMERA->Render();
 	SCENE->Render();
+	PARTICLE->BackRender();
 	OBJECT->Render();
+	PARTICLE->FrontRender();
 
 	IMAGE->End();
 }
@@ -50,6 +58,7 @@ void MainGame::Release()
 	CAMERA->ReleaseInstance();
 	OBJECT->ReleaseInstance();
 
+	PARTICLE->ReleaseInstance();
 	SCHEDULE->ReleaseInstance();
 }
 

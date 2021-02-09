@@ -225,6 +225,9 @@
     <ClCompile Include="RectBoom.cpp">
       <Filter>Particle\RectBoom</Filter>
     </ClCompile>
+    <ClCompile Include="ParticleManager.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -309,6 +312,9 @@
     </ClInclude>
     <ClInclude Include="RectBoom.h">
       <Filter>Particle\RectBoom</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleManager.h">
+      <Filter>Particle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

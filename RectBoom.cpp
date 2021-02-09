@@ -1,7 +1,7 @@
 #include "DXUT.h"
 #include "RectBoom.h"
 
-void RectBoom::Init(float lifeTime)
+void RectBoom::Init()
 {
 	m_Alpha = 1;
 	
@@ -9,6 +9,7 @@ void RectBoom::Init(float lifeTime)
 	m_Transform->Init();
 
 	m_Renderer = new Renderer();
+	m_Renderer->OwnerTransform = m_Transform;
 	m_Renderer->Init();
 
 	m_Renderer->Image = IMAGE->AddImage("RectBoom", "./Assets/RectBoom/WhiteBoom.png");
@@ -42,4 +43,15 @@ void RectBoom::Release()
 bool RectBoom::IsDestroy()
 {
 	return m_Alpha <= 0;
+}
+
+Particle* RectBoom::Instantiat(Vector2 position, float scale)
+{
+	RectBoom* instance = new RectBoom();
+	instance->Init();
+
+	instance->GetTransform()->Position = position;
+	instance->GetTransform()->Scale = ONE * scale;
+
+	return instance;
 }
