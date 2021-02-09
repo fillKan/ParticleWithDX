@@ -1,7 +1,7 @@
 #pragma once
 enum class ParticleName
 {
-	RectBoom
+	Mostima
 };
 
 class ParticleManager : public Singleton<ParticleManager>

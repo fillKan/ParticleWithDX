@@ -406,7 +406,7 @@
     <ClCompile Include="ParticleManager.cpp" />
     <ClCompile Include="ParticleRenderer.cpp" />
     <ClCompile Include="Playable.cpp" />
-    <ClCompile Include="RectBoom.cpp" />
+    <ClCompile Include="Mostima.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="SampleScene.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -434,7 +434,7 @@
     <ClInclude Include="ParticleManager.h" />
     <ClInclude Include="ParticleRenderer.h" />
     <ClInclude Include="Playable.h" />
-    <ClInclude Include="RectBoom.h" />
+    <ClInclude Include="Mostima.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="SampleScene.h" />
     <ClInclude Include="Scene.h" />

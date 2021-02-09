@@ -3,7 +3,7 @@
 
 #include "SampleScene.h"
 
-#include "RectBoom.h"
+#include "Mostima.h"
 
 void MainGame::Init()
 {
@@ -21,7 +21,7 @@ void MainGame::Init()
 	SCENE->AddScene(new SampleScene);
 	SCENE->LoadScene("SampleScene");
 
-	PARTICLE->RegisteParticle(ParticleName::RectBoom, new RectBoom());
+	PARTICLE->RegisteParticle(ParticleName::Mostima, new Mostima());
 }
 
 void MainGame::Update()

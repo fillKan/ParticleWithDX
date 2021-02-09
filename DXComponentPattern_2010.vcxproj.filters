@@ -81,7 +81,7 @@
     <Filter Include="Particle">
       <UniqueIdentifier>{bc865067-27a7-4245-8bc3-84df330aa87b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Particle\RectBoom">
+    <Filter Include="Particle\Mostima">
       <UniqueIdentifier>{435623c4-f396-40eb-a152-2a45a5beaac9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -222,14 +222,14 @@
     <ClCompile Include="Particle.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
-    <ClCompile Include="RectBoom.cpp">
-      <Filter>Particle\RectBoom</Filter>
-    </ClCompile>
     <ClCompile Include="ParticleManager.cpp">
       <Filter>Particle</Filter>
     </ClCompile>
     <ClCompile Include="ParticleRenderer.cpp">
       <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="Mostima.cpp">
+      <Filter>Particle\Mostima</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -313,14 +313,14 @@
     <ClInclude Include="Particle.h">
       <Filter>Particle</Filter>
     </ClInclude>
-    <ClInclude Include="RectBoom.h">
-      <Filter>Particle\RectBoom</Filter>
-    </ClInclude>
     <ClInclude Include="ParticleManager.h">
       <Filter>Particle</Filter>
     </ClInclude>
     <ClInclude Include="ParticleRenderer.h">
       <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="Mostima.h">
+      <Filter>Particle\Mostima</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

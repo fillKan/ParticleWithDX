@@ -1,5 +1,5 @@
 #pragma once
-class RectBoom : public Particle
+class Mostima : public Particle
 {
 public:
 	virtual void Init  () override;

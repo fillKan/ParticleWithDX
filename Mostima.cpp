@@ -1,7 +1,7 @@
 #include "DXUT.h"
-#include "RectBoom.h"
+#include "Mostima.h"
 
-void RectBoom::Init()
+void Mostima::Init()
 {
 	m_Alpha = 1;
 	
@@ -14,7 +14,7 @@ void RectBoom::Init()
 	m_Renderer->Image = IMAGE->AddImage("RectBoom", "./Assets/RectBoom/WhiteBoom.png");
 }
 
-void RectBoom::Update(float deltaTime)
+void Mostima::Update(float deltaTime)
 {
 	m_Alpha = Clamp(m_Alpha - deltaTime * 0.5f, 0, 1);
 	SetAlpha(m_Renderer->Color, m_Alpha);
@@ -29,23 +29,23 @@ void RectBoom::Update(float deltaTime)
 	m_Transform->Rotation += deltaTime;
 }
 
-void RectBoom::Render()
+void Mostima::Render()
 {
 	m_Renderer->Render();
 }
 
-void RectBoom::Release()
+void Mostima::Release()
 {
 }
 
-bool RectBoom::IsDestroy()
+bool Mostima::IsDestroy()
 {
 	return m_Alpha <= 0;
 }
 
-Particle* RectBoom::Instantiat(Vector2 position, float scale)
+Particle* Mostima::Instantiat(Vector2 position, float scale)
 {
-	RectBoom* instance = new RectBoom();
+	Mostima* instance = new Mostima();
 	instance->Init();
 
 	instance->GetTransform()->Position = position;
