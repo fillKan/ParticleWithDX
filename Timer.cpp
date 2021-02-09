@@ -14,6 +14,7 @@ void Timer::Start()
 	RestTime = LifeTime;
 
 	RestInvoke = Invoke;
+	RestInvoke++;
 }
 
 void Timer::Start(float time)
@@ -22,6 +23,7 @@ void Timer::Start(float time)
 	RestTime = LifeTime;
 
 	RestInvoke = Invoke;
+	RestInvoke++;
 }
 
 void Timer::Start(float time, int invoke)
@@ -31,6 +33,7 @@ void Timer::Start(float time, int invoke)
 
 	Invoke = invoke;
 	RestInvoke = invoke;
+	RestInvoke++;
 }
 
 void Timer::Update()
@@ -59,7 +62,12 @@ bool Timer::IsOver()
 	return RestTime <= 0 && RestInvoke > 0;
 }
 
-float Timer::Percent()
+float Timer::TimePercent()
 {
 	return (LifeTime - RestTime) / LifeTime;
+}
+
+float Timer::InvokePercent()
+{
+	return (Invoke - RestInvoke + 1) / Invoke;
 }

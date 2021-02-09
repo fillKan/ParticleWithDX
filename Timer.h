@@ -12,15 +12,17 @@ public:
 	void Update();
 	bool IsOver();
 
-	float Percent();
+	float TimePercent();
+	float InvokePercent();
 
 public:
 	bool IsLooping;
 
 	int Invoke;
-	int RestInvoke;
-
 	float LifeTime;
+
+private:
+	int RestInvoke;
 	float RestTime;
 };
 
