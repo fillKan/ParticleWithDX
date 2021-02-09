@@ -7,8 +7,7 @@ public:
 
 	void Start();
 	void Start(float time);
-	void Start(function<void()> timeOverFunc);
-	void Start(float time, function<void()> timeOverFunc);
+	void Start(float time, int invoke);
 
 	void Update();
 	bool IsOver();
@@ -17,10 +16,11 @@ public:
 
 public:
 	bool IsLooping;
-	function<void()> TimeOverFunc;
 
-private:
-	float m_LifeTime;
-	float m_RestTime;
+	int Invoke;
+	int RestInvoke;
+
+	float LifeTime;
+	float RestTime;
 };
 

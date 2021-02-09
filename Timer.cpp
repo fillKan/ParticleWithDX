@@ -1,7 +1,7 @@
 #include "DXUT.h"
 #include "Timer.h"
 
-Timer::Timer(float time, bool looping) : m_LifeTime(time), IsLooping(looping)
+Timer::Timer(float time, bool looping) : LifeTime(time), IsLooping(looping)
 {
 }
 
@@ -11,52 +11,55 @@ Timer::~Timer()
 
 void Timer::Start()
 {
-	m_RestTime = m_LifeTime;
+	RestTime = LifeTime;
+
+	RestInvoke = Invoke;
 }
 
 void Timer::Start(float time)
 {
-	m_LifeTime = time;
-	m_RestTime = m_LifeTime;
+	LifeTime = time;
+	RestTime = LifeTime;
+
+	RestInvoke = Invoke;
 }
 
-void Timer::Start(function<void()> timeOverFunc)
+void Timer::Start(float time, int invoke)
 {
-	TimeOverFunc = timeOverFunc;
-}
+	LifeTime = time;
+	RestTime = LifeTime;
 
-void Timer::Start(float time, function<void()> timeOverFunc)
-{
-	m_LifeTime = time;
-	m_RestTime = m_LifeTime;
-
-	TimeOverFunc = timeOverFunc;
+	Invoke = invoke;
+	RestInvoke = invoke;
 }
 
 void Timer::Update()
 {
-	if (m_RestTime > 0)
+	if (IsLooping && RestInvoke <= 0) 
 	{
-		m_RestTime -= DeltaTime;
+		RestInvoke = Invoke; 
+	}
+	if (RestInvoke > 0) 
+	{
+		if (RestTime <= 0) {
+			RestTime = LifeTime;
+		}
+		RestTime -= DeltaTime;
 
-		if (m_RestTime <= 0)
+		if (RestTime <= 0)
 		{
-			TimeOverFunc();
-
-			if (IsLooping)
-			{
-				m_RestTime = m_LifeTime;
-			}
+			RestInvoke--;
+			RestTime = 0;
 		}
 	}
 }
 
 bool Timer::IsOver()
 {
-	return m_RestTime <= 0;
+	return RestTime <= 0 && RestInvoke > 0;
 }
 
 float Timer::Percent()
 {
-	return (m_LifeTime - m_RestTime) / m_LifeTime;
+	return (LifeTime - RestTime) / LifeTime;
 }
