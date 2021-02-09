@@ -63,3 +63,8 @@ void Math::SetAlpha(D3DCOLOR& color, float alpha)
 {
 	color = (color & 0x00ffffff) | (D3DCOLOR(255 * alpha) << 24);
 }
+
+Vector2 Math::Lerp(Vector2 a, Vector2 b, float ratio)
+{
+	return (b * ratio) + (a * (1 - ratio));
+}

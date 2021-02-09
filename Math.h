@@ -13,4 +13,5 @@ namespace Math
 	float Direction(Vector2 from, Vector2 to);
 
 	void SetAlpha(D3DCOLOR& color, float alpha);
+	Vector2 Lerp(Vector2 a, Vector2 b, float ratio);
 }

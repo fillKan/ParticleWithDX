@@ -10,5 +10,13 @@ public:
 	virtual bool IsDestroy() override;
 
 	virtual Particle* Instantiat(Vector2 position = ZERO, float scale = 1) override;
+
+private:
+	int m_AnimationLevel;
+
+	float m_Ratio;
+	
+	Vector2 m_HighVector;
+	Vector2 m_GoalVector;
 };
 
