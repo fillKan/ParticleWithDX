@@ -8,17 +8,15 @@ void RectBoom::Init()
 	m_Transform = new Transform();
 	m_Transform->Init();
 
-	m_Renderer = new Renderer();
-	m_Renderer->OwnerTransform = m_Transform;
-	m_Renderer->Init();
+	m_Renderer = new ParticleRenderer();
+	m_Renderer->Init(m_Transform);
 
 	m_Renderer->Image = IMAGE->AddImage("RectBoom", "./Assets/RectBoom/WhiteBoom.png");
-	m_Transform->Scale = ONE * 3;
 }
 
 void RectBoom::Update(float deltaTime)
 {
-	m_Alpha = Clamp(m_Alpha - deltaTime * Speed, 0, 1);
+	m_Alpha = Clamp(m_Alpha - deltaTime * 0.5f, 0, 1);
 	SetAlpha(m_Renderer->Color, m_Alpha);
 
 	if (m_Transform->Scale.x < 0)
