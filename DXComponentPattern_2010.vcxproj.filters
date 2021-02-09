@@ -84,6 +84,9 @@
     <Filter Include="Particle\Mostima">
       <UniqueIdentifier>{435623c4-f396-40eb-a152-2a45a5beaac9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\Script\MostimaBoom">
+      <UniqueIdentifier>{5031bb18-23be-4100-97d9-a5b78503932f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -231,6 +234,9 @@
     <ClCompile Include="Mostima.cpp">
       <Filter>Particle\Mostima</Filter>
     </ClCompile>
+    <ClCompile Include="MostimaBoom.cpp">
+      <Filter>Component\Script\MostimaBoom</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -321,6 +327,9 @@
     </ClInclude>
     <ClInclude Include="Mostima.h">
       <Filter>Particle\Mostima</Filter>
+    </ClInclude>
+    <ClInclude Include="MostimaBoom.h">
+      <Filter>Component\Script\MostimaBoom</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

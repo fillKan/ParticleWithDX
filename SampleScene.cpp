@@ -20,7 +20,7 @@ void SampleScene::Update()
 {
 	if (INPUT->GetKeyDown(VK_SPACE))
 	{
-		PARTICLE->CreateParticle(ParticleName::Mostima, false, Vector2(WINSIZE_X / 2, WINSIZE_Y / 2), 3);
+		OBJECT->NewObject("Player", INPUT->GetMousePoint(), Tag::Default)->AddComponent<MostimaBoom>();
 	}
 }
 

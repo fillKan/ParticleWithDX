@@ -54,6 +54,7 @@ enum Tag
 #include "ParticleRenderer.h"
 #include "Particle.h"
 #include "ParticleManager.h"
+#include "Mostima.h"
 #include "Object.h"
 #include "ObjectManager.h"
 
@@ -63,5 +64,5 @@ enum Tag
 #include "CircleCollider.h"
 #include "Renderer.h"
 #include "Animator.h"
-#include "Mostima.h"
 #include "Playable.h"
+#include "MostimaBoom.h"

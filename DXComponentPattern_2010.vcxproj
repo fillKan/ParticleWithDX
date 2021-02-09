@@ -400,6 +400,7 @@
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="MostimaBoom.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="Particle.cpp" />
@@ -428,6 +429,7 @@
     <ClInclude Include="MainCamera.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Math.h" />
+    <ClInclude Include="MostimaBoom.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Particle.h" />
