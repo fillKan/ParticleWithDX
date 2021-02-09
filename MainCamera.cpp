@@ -4,6 +4,7 @@
 void MainCamera::Init()
 {
 	m_Position = Vector2(WINSIZE_X, WINSIZE_Y) * 0.5f;
+	m_FixedPosition = m_Position;
 	m_Scale = 1;
 	m_Rot = 0;
 	m_ShakeForce = 0;
@@ -22,6 +23,7 @@ void MainCamera::Update()
 			m_ShakeForce = 0;
 			m_ShakePosition = ZERO;
 		}
+		m_Position = m_FixedPosition + m_ShakePosition;
 	}
 	Matrix P, S, R;
 	Vector2 inversePos = m_Position * -1;

@@ -19,5 +19,8 @@ public:
 
 	void Shake(float force, float time);
 	Matrix GetVlewMatrix();
+
+private:
+	Vector2 m_FixedPosition;
 };
 #define CAMERA MainCamera::Instance()

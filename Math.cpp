@@ -8,7 +8,7 @@ int Math::Random(int min, int max)
 
 float Math::Random(float min, float max)
 {
-	return Random(min * 1000, max * 10000) * 0.0001f;
+	return Random((int)(min * 1000), (int)(max * 10000)) * 0.0001f;
 }
 
 float Math::Random()
