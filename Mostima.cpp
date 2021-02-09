@@ -24,7 +24,7 @@ void Mostima::Update(float deltaTime)
 		m_Transform->Scale -= deltaTime * ONE * 3;
 	}
 	else
-		m_Transform->Scale -= deltaTime * ONE * 5;
+		m_Transform->Scale -= deltaTime * ONE * 7;
 
 	m_Transform->Rotation += deltaTime;
 }

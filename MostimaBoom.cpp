@@ -6,8 +6,8 @@ void MostimaBoom::Init()
 	m_ParticleTimer = new Timer(0.1, false);
 	m_ParticleTimer->Start(0.1f, 4);
 
-	m_ImpactTimer = new Timer(0.35f, false);
-	m_ImpactTimer->Start(0.35f, 1);
+	m_ImpactTimer = new Timer(0.75f, false);
+	m_ImpactTimer->Start(0.75f, 1);
 }
 void MostimaBoom::Update()
 {
@@ -15,7 +15,7 @@ void MostimaBoom::Update()
 
 	if (m_ParticleTimer->IsOver())
 	{
-		PARTICLE->CreateParticle(ParticleName::Mostima, false, Owner->GetTransform()->Position, 3);
+		PARTICLE->CreateParticle(ParticleName::Mostima, false, Owner->GetTransform()->Position, 4);
 
 		if (m_ParticleTimer->Invoke == 0)
 		{
@@ -26,7 +26,7 @@ void MostimaBoom::Update()
 
 	if (m_ImpactTimer->IsOver())
 	{
-		CAMERA->Shake(1, 0.5f);
+		CAMERA->Shake(25, 0.5f);
 	}
 }
 
