@@ -9,6 +9,7 @@ public:
 
 	void Init(Transform* transform);
 	void Render ();
+	void Render (RECT rect);
 	void Release();
 
 public:

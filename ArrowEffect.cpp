@@ -24,6 +24,7 @@ void ArrowEffect::Update(float deltaTime)
 
 void ArrowEffect::Render()
 {
+	m_Renderer->Render(m_Rect);
 }
 
 void ArrowEffect::Release()
