@@ -13,5 +13,10 @@ public:
 
 private:
 	RECT m_Rect;
+
+	Vector2 m_UpPoint;
+	float m_Ratio;
+
+	int m_AnimationLevel;
 };
 
