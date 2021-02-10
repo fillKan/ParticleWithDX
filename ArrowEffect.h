@@ -12,9 +12,12 @@ public:
 	virtual Particle* Instantiat(Vector2 position = ZERO, float scale = 1) override;
 
 private:
+	Vector2 GoalPoint(float length);
+
+private:
 	RECT m_Rect;
 
-	Vector2 m_UpPoint;
+	Vector2 m_StartPoint;
 	float m_Ratio;
 
 	int m_AnimationLevel;

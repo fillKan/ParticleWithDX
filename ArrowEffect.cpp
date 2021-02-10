@@ -24,11 +24,10 @@ void ArrowEffect::Init()
 void ArrowEffect::Update(float deltaTime)
 {
 	m_Ratio = Clamp(m_Ratio + deltaTime, 0, 1);
-
 	switch (m_AnimationLevel)
 	{
 	case 0:
-		m_Transform->Position = Lerp(m_Transform->Position, m_UpPoint, m_Ratio);
+		m_Transform->Position = Lerp(m_Transform->Position, GoalPoint(80), m_Ratio);
 
 		if (m_Ratio >= 0.35f)
 		{
@@ -71,10 +70,17 @@ Particle* ArrowEffect::Instantiat(Vector2 position, float scale)
 	ArrowEffect* instance = new ArrowEffect();
 	instance->Init();
 
-	instance->m_UpPoint = position + UP * 80;
+	instance->m_StartPoint = position;
 
 	instance->GetTransform()->Position = position;
 	instance->GetTransform()->Scale = ONE * scale;
 
 	return instance;
+}
+
+Vector2 ArrowEffect::GoalPoint(float length)
+{
+	float rot = m_Transform->Rotation - D3DXToRadian(90);
+
+	return m_StartPoint + Vector2(cosf(rot), sinf(rot)) * length;
 }

@@ -20,7 +20,10 @@ void SampleScene::Update()
 {
 	if (INPUT->GetKeyDown(VK_SPACE))
 	{
-		PARTICLE->CreateParticle(ParticleName::ArrowEffect, true, INPUT->GetMousePoint());
+		PARTICLE->CreateParticle(ParticleName::ArrowEffect, true, INPUT->GetMousePoint())->GetTransform()->Rotation = D3DXToRadian(270);
+		PARTICLE->CreateParticle(ParticleName::ArrowEffect, true, INPUT->GetMousePoint())->GetTransform()->Rotation = D3DXToRadian(180);
+		PARTICLE->CreateParticle(ParticleName::ArrowEffect, true, INPUT->GetMousePoint())->GetTransform()->Rotation = D3DXToRadian(90);
+		PARTICLE->CreateParticle(ParticleName::ArrowEffect, true, INPUT->GetMousePoint())->GetTransform();
 		//OBJECT->NewObject("Player", INPUT->GetMousePoint(), Tag::Default)->AddComponent<MostimaBoom>();
 	}
 }
