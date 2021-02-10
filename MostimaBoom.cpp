@@ -27,6 +27,9 @@ void MostimaBoom::Update()
 	if (m_ImpactTimer->IsOver())
 	{
 		CAMERA->Shake(25, 0.5f);
+
+		PARTICLE->CreateParticle(ParticleName::Twinkle, true, Owner->GetTransform()->Position, 2);
+		PARTICLE->CreateParticle(ParticleName::Twinkle, true, Owner->GetTransform()->Position, 2)->GetTransform()->Rotation = D3DXToRadian(90);
 	}
 }
 

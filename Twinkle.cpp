@@ -23,7 +23,7 @@ void Twinkle::Update(float deltaTime)
 	{
 	case 0:
 		m_Transform->Scale = Lerp(m_Transform->Scale, m_HighVector, m_Ratio);
-		if (fabsf(m_Ratio - 1) <= 0.6)
+		if (m_Ratio >= 0.4)
 		{
 			m_AnimationLevel = 1;
 			m_Ratio = 0;
