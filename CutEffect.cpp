@@ -9,7 +9,8 @@ void CutEffect::Init()
 	m_Renderer = new ParticleRenderer();
 	m_Renderer->Init(m_Transform);
 
-	m_Renderer->Image = IMAGE->AddImage("WhiteSquare", "./Assets/Particle/WhiteSquare.png");
+	m_Renderer->Image = IMAGE->AddImage("Hexagon", "./Assets/Particle/Hexagon.png");
+
 	Speed *= 1.75f;
 }
 
