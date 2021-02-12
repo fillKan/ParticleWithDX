@@ -16,6 +16,11 @@ float Math::Random()
 	return Random(-1.0f, 1.0f);
 }
 
+float Math::RandomRadian()
+{
+	return D3DXToRadian(Random(0, 360));
+}
+
 float Math::Sign(float value)
 {
 	if (value > 0) return  1;

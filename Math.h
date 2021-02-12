@@ -4,6 +4,7 @@ namespace Math
 	int Random(int min, int max);
 	float Random(float min, float max);
 	float Random();
+	float RandomRadian();
 	float Sign(float value);
 	float Clamp(float value, float min, float max);
 
