@@ -68,3 +68,8 @@ Vector2 Math::Lerp(Vector2 a, Vector2 b, float ratio)
 {
 	return (b * ratio) + (a * (1 - ratio));
 }
+
+float Math::Lerp(float a, float b, float ratio)
+{
+	return (b * ratio) + (a * (1 - ratio));
+}

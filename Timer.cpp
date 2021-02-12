@@ -1,7 +1,7 @@
 #include "DXUT.h"
 #include "Timer.h"
 
-Timer::Timer(float time, bool looping) : LifeTime(time), IsLooping(looping)
+Timer::Timer(float time, bool looping) : LifeTime(time), IsLooping(looping), RestInvoke(2), Invoke(1)
 {
 }
 
@@ -40,7 +40,7 @@ void Timer::Update()
 {
 	if (IsLooping && RestInvoke <= 0) 
 	{
-		RestInvoke = Invoke; 
+		RestInvoke = Invoke + 1;
 	}
 	if (RestInvoke > 0) 
 	{

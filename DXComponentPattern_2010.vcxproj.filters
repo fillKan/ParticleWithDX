@@ -90,6 +90,9 @@
     <Filter Include="Particle\Twinkle">
       <UniqueIdentifier>{ae7eb833-8576-4ad6-90b1-2d2ea5a085dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\ArrowEffect">
+      <UniqueIdentifier>{7a72f94f-5381-40b0-b30b-696292bea1db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -243,6 +246,9 @@
     <ClCompile Include="Twinkle.cpp">
       <Filter>Particle\Twinkle</Filter>
     </ClCompile>
+    <ClCompile Include="ArrowEffect.cpp">
+      <Filter>Particle\ArrowEffect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -339,6 +345,9 @@
     </ClInclude>
     <ClInclude Include="Twinkle.h">
       <Filter>Particle\Twinkle</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrowEffect.h">
+      <Filter>Particle\ArrowEffect</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
