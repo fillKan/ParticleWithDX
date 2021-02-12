@@ -10,22 +10,19 @@ void Twinkle::Init()
 	m_Renderer->Init(m_Transform);
 
 	m_Renderer->Image = IMAGE->AddImage("WhiteSquare", "./Assets/Particle/WhiteSquare.png");
-
-	m_AnimationLevel = 0;
-	m_Ratio = 0;
 }
 
 void Twinkle::Update(float deltaTime)
 {
-	m_Ratio = Clamp(m_Ratio + DeltaTime, 0, 1);
+	m_Ratio = Clamp(m_Ratio + DeltaTime * Speed, 0, 1);
 
-	switch (m_AnimationLevel)
+	switch (AnimationLevel)
 	{
 	case 0:
 		m_Transform->Scale = Lerp(m_Transform->Scale, m_HighVector, m_Ratio);
 		if (m_Ratio >= 0.4)
 		{
-			m_AnimationLevel = 1;
+			AnimationLevel = 1;
 			m_Ratio = 0;
 		}
 		break;
@@ -34,7 +31,7 @@ void Twinkle::Update(float deltaTime)
 		m_Transform->Scale = Lerp(m_Transform->Scale, m_GoalVector, m_Ratio);
 		if (m_Ratio == 1)
 		{
-			m_AnimationLevel = 2; 
+			AnimationLevel = 2;
 			m_Ratio = 0;
 		}
 		break;
@@ -52,7 +49,7 @@ void Twinkle::Release()
 
 bool Twinkle::IsDestroy()
 {
-	return m_AnimationLevel == 2;
+	return AnimationLevel == 2;
 }
 
 Particle* Twinkle::Instantiat(Vector2 position, float scale)

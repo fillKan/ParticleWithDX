@@ -17,14 +17,12 @@ void ArrowEffect::Init()
 		(LONG)(m_Renderer->Image->Info.Height * m_Transform->Scale.y)
 	};
 	m_Ratio = 0;
-
-	m_AnimationLevel = 0;
 }
 
 void ArrowEffect::Update(float deltaTime)
 {
-	m_Ratio = Clamp(m_Ratio + deltaTime, 0, 1);
-	switch (m_AnimationLevel)
+	m_Ratio = Clamp(m_Ratio + deltaTime * Speed, 0, 1);
+	switch (AnimationLevel)
 	{
 	case 0:
 		m_Transform->Position = Lerp(m_Transform->Position, GoalPoint(80), m_Ratio);
@@ -32,7 +30,7 @@ void ArrowEffect::Update(float deltaTime)
 		if (m_Ratio >= 0.35f)
 		{
 			m_Ratio = 0;
-			m_AnimationLevel++;
+			AnimationLevel++;
 		}
 		break;
 
@@ -42,7 +40,7 @@ void ArrowEffect::Update(float deltaTime)
 		if (m_Ratio == 1)
 		{
 			m_Ratio = 0;
-			m_AnimationLevel++;
+			AnimationLevel++;
 		}
 		break;
 
@@ -62,7 +60,7 @@ void ArrowEffect::Release()
 
 bool ArrowEffect::IsDestroy()
 {
-	return m_AnimationLevel == 2;
+	return AnimationLevel == 2;
 }
 
 Particle* ArrowEffect::Instantiat(Vector2 position, float scale)
