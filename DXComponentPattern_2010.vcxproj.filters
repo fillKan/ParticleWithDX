@@ -93,6 +93,9 @@
     <Filter Include="Particle\ArrowEffect">
       <UniqueIdentifier>{7a72f94f-5381-40b0-b30b-696292bea1db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\Cut">
+      <UniqueIdentifier>{df527d92-e583-49f2-b846-cccdd0dff70d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -249,6 +252,9 @@
     <ClCompile Include="ArrowEffect.cpp">
       <Filter>Particle\ArrowEffect</Filter>
     </ClCompile>
+    <ClCompile Include="CutEffect.cpp">
+      <Filter>Particle\Cut</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -348,6 +354,9 @@
     </ClInclude>
     <ClInclude Include="ArrowEffect.h">
       <Filter>Particle\ArrowEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="CutEffect.h">
+      <Filter>Particle\Cut</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
