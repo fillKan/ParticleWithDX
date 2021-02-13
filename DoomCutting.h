@@ -13,8 +13,12 @@ public:
 
 private:
 	Timer* m_CutTimer;
+	Timer* m_TxtTimer;
 
 	Texture * m_HexagonLight;
 	Renderer* m_Renderer;
+
+	float m_Alpha;
+	bool m_TxtTimerStart;
 };
 
