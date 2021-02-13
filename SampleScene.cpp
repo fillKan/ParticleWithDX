@@ -20,8 +20,7 @@ void SampleScene::Update()
 {
 	if (INPUT->GetKeyDown(VK_SPACE))
 	{
-		Particle* particle = PARTICLE->CreateParticle(ParticleName::CutEffect, true, INPUT->GetMousePoint(),2);
-		particle->GetTransform()->Rotation = D3DXToRadian(Random(0, 360));
+		OBJECT->NewObject("Doom", INPUT->GetMousePoint(), Tag::Default)->AddComponent<DoomCutting>();
 	}
 }
 
