@@ -62,6 +62,11 @@ bool Timer::IsOver()
 	return RestTime <= 0 && RestInvoke > 0;
 }
 
+bool Timer::IsCompletelyOver()
+{
+	return RestInvoke <= 1;
+}
+
 float Timer::TimePercent()
 {
 	return (LifeTime - RestTime) / LifeTime;

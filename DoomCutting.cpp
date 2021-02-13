@@ -34,7 +34,7 @@ void DoomCutting::Update()
 		particle2->GetTransform()->Rotation = particle->GetTransform()->Rotation;
 		particle2->Speed *= speed;
 
-		if (m_CutTimer->InvokePercent() >= 1)
+		if (m_CutTimer->IsCompletelyOver())
 		{
 			float scale = 3.5f;
 			float rots[12];
