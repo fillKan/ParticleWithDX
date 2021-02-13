@@ -391,6 +391,7 @@
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="ArrowEffect.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="Fragment.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -425,6 +426,7 @@
     <ClInclude Include="Animator.h" />
     <ClInclude Include="ArrowEffect.h" />
     <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="Fragment.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />

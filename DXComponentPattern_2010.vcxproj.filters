@@ -99,6 +99,9 @@
     <Filter Include="Component\Script\DoomCutting">
       <UniqueIdentifier>{f6558051-628a-46d7-be6f-f12ddc011759}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\Fragment">
+      <UniqueIdentifier>{ca0673fb-dae5-4812-ae57-3652ff84da01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -261,6 +264,9 @@
     <ClCompile Include="DoomCutting.cpp">
       <Filter>Component\Script\DoomCutting</Filter>
     </ClCompile>
+    <ClCompile Include="Fragment.cpp">
+      <Filter>Particle\Fragment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -366,6 +372,9 @@
     </ClInclude>
     <ClInclude Include="DoomCutting.h">
       <Filter>Component\Script\DoomCutting</Filter>
+    </ClInclude>
+    <ClInclude Include="Fragment.h">
+      <Filter>Particle\Fragment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
