@@ -4,9 +4,11 @@ namespace Math
 	int Random(int min, int max);
 	float Random(float min, float max);
 	float Random();
+	float RandomRadian();
 	float Sign(float value);
 	float Clamp(float value, float min, float max);
 
+	Vector2 Normalize(Vector2 vector);
 	Vector2 Rotate(Vector2 vector, float rot);
 	float Distance(Vector2 vector);
 	float Distance(Vector2 from, Vector2 to);

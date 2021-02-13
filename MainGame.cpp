@@ -6,6 +6,8 @@
 #include "Mostima.h"
 #include "Twinkle.h"
 #include "ArrowEffect.h"
+#include "CutEffect.h"
+#include "Fragment.h"
 
 void MainGame::Init()
 {
@@ -26,6 +28,8 @@ void MainGame::Init()
 	PARTICLE->RegisteParticle(ParticleName::Mostima, new Mostima());
 	PARTICLE->RegisteParticle(ParticleName::Twinkle, new Twinkle());
 	PARTICLE->RegisteParticle(ParticleName::ArrowEffect, new ArrowEffect());
+	PARTICLE->RegisteParticle(ParticleName::CutEffect, new CutEffect());
+	PARTICLE->RegisteParticle(ParticleName::Fragment, new Fragment());
 }
 
 void MainGame::Update()

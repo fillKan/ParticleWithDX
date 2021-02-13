@@ -1,7 +1,7 @@
 #pragma once
 enum class ParticleName
 {
-	Mostima, Twinkle, ArrowEffect
+	Mostima, Twinkle, ArrowEffect, CutEffect, Fragment
 };
 
 class ParticleManager : public Singleton<ParticleManager>

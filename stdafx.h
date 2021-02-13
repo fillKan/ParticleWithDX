@@ -68,3 +68,4 @@ enum Tag
 #include "Animator.h"
 #include "Playable.h"
 #include "MostimaBoom.h"
+#include "DoomCutting.h"

@@ -49,8 +49,18 @@ void MainCamera::Release()
 
 void MainCamera::Shake(float force, float time)
 {
-	m_ShakeForce = force;
-	m_ShakeForcePerFrame = force / time;
+	float forcePerFrame = force / time;
+
+	if (m_ShakeForce > force)
+	{
+		m_ShakeForce += force;
+		m_ShakeForcePerFrame += forcePerFrame;
+	}
+	else
+	{
+		m_ShakeForce = force;
+		m_ShakeForcePerFrame = forcePerFrame;
+	}
 }
 
 Matrix MainCamera::GetVlewMatrix()
