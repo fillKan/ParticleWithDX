@@ -39,13 +39,15 @@ void DoomCutting::Update()
 		particle2->GetTransform()->Rotation = particle->GetTransform()->Rotation;
 		particle2->Speed *= speed;
 
+		CAMERA->Shake(10, 0.04f);
+
 		if (m_CutTimer->IsCompletelyOver())
 		{
-			float scale = 3.5f;
+			float scale = 6.5f;
 			float rots[12];
 			Vector2 positions[12];
 
-			CAMERA->Shake(45, 0.5f);
+			CAMERA->Shake(55, 0.6f);
 			m_Renderer->IsEnable = true;
 
 			speed  = 0.4f;
@@ -66,7 +68,7 @@ void DoomCutting::Update()
 			}
 			for (int i = 0; i < 12; i++)
 			{
-				Particle* particle = PARTICLE->CreateParticle(ParticleName::CutEffect, true, positions[i], length);
+				Particle* particle = PARTICLE->CreateParticle(ParticleName::CutEffect, true, positions[i], 0.5f);
 				particle->Speed *= speed;
 				particle->GetTransform()->Rotation = rots[i];
 				particle->GetTransform()->Scale *= scale;
