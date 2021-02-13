@@ -14,10 +14,7 @@ public:
 private:
 	Timer* m_CutTimer;
 
-	Transform* m_Transform;
-
 	Texture * m_HexagonLight;
 	Renderer* m_Renderer;
-	float m_Ratio;
 };
 

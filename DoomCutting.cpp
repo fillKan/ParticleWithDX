@@ -10,9 +10,6 @@ void DoomCutting::Init()
 	m_CutTimer = new Timer(0.05f, false);
 	m_CutTimer->Start(0.1f, 16);
 
-	m_Transform = Owner->GetTransform();
-	m_Transform->Scale = ZERO;
-
 	m_HexagonLight = IMAGE->AddImage("Hexagon_Light", "./Assets/Particle/Doom/Hexagon_Light.png");
 }
 
@@ -39,7 +36,7 @@ void DoomCutting::Update()
 
 		if (m_CutTimer->InvokePercent() >= 1)
 		{
-			float scale = 4.5f;
+			float scale = 3.5f;
 			float rots[12];
 			Vector2 positions[12];
 
@@ -70,11 +67,6 @@ void DoomCutting::Update()
 				particle->GetTransform()->Scale *= scale;
 			}
 		}
-	}
-	if (m_CutTimer->InvokePercent() >= 1)
-	{
-		m_Ratio = Clamp(m_Ratio + DeltaTime * 1.5f, 0, 1);
-		m_Transform->Scale = Lerp(m_Transform->Scale, ONE, m_Ratio);
 	}
 }
 
