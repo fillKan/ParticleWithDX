@@ -12,7 +12,7 @@ void DoomCutting::Init()
 	m_CutTimer = new Timer(0.05f, false);
 	m_CutTimer->Start(0.1f, 16);
 
-	m_TxtTimer = new Timer(1.0f, false);
+	m_TxtTimer = new Timer(1.25f, false);
 	m_TxtTimerStart = false;
 
 	m_HexagonLight = IMAGE->AddImage("Hexagon_Light", "./Assets/Particle/Doom/Hexagon_Light.png");
@@ -39,7 +39,7 @@ void DoomCutting::Update()
 		particle2->GetTransform()->Rotation = particle->GetTransform()->Rotation;
 		particle2->Speed *= speed;
 
-		CAMERA->Shake(10, 0.04f);
+		CAMERA->Shake(10, 0.08f);
 
 		if (m_CutTimer->IsCompletelyOver())
 		{
@@ -72,6 +72,19 @@ void DoomCutting::Update()
 				particle->Speed *= speed;
 				particle->GetTransform()->Rotation = rots[i];
 				particle->GetTransform()->Scale *= scale;
+			}
+			position = Owner->GetTransform()->Position;
+
+			for (int i = 0; i < 48; i++)
+			{
+				Vector2 direction = Normalize(Vector2(Random(), Random()));
+
+				Particle* particle = PARTICLE->CreateParticle(ParticleName::Fragment, false, position, 0.8f);
+				particle->SetValue(300 * Random(1.0f, 3.0f), direction);
+
+				Transform* transform = particle->GetTransform();
+				transform->Rotation = RandomRadian();
+				transform->Scale *= Random(0.7f, 1.2f);
 			}
 			m_TxtTimerStart = true;
 		}
