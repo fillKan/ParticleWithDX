@@ -12,11 +12,13 @@ void Mostima::Init()
 	m_Renderer->Init(m_Transform);
 
 	m_Renderer->Image = IMAGE->AddImage("WhiteSquare_Hollow", "./Assets/Particle/WhiteSquare_Hollow.png");
+
+	Speed = 0.5f;
 }
 
 void Mostima::Update(float deltaTime)
 {
-	m_Alpha = Clamp(m_Alpha - deltaTime * 0.5f, 0, 1);
+	m_Alpha = Clamp(m_Alpha - deltaTime * Speed, 0, 1);
 	SetAlpha(m_Renderer->Color, m_Alpha);
 
 	if (m_Transform->Scale.x < 0)

@@ -20,7 +20,7 @@ void SampleScene::Update()
 {
 	if (INPUT->GetKeyDown(VK_SPACE))
 	{
-		OBJECT->NewObject("Player", INPUT->GetMousePoint(), Tag::Default)->AddComponent<MostimaBoom>();
+		OBJECT->NewObject("Doom", INPUT->GetMousePoint(), Tag::Default)->AddComponent<DoomCutting>();
 	}
 }
 

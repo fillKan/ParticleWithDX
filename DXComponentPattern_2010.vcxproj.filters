@@ -90,6 +90,18 @@
     <Filter Include="Particle\Twinkle">
       <UniqueIdentifier>{ae7eb833-8576-4ad6-90b1-2d2ea5a085dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Particle\ArrowEffect">
+      <UniqueIdentifier>{7a72f94f-5381-40b0-b30b-696292bea1db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle\Cut">
+      <UniqueIdentifier>{df527d92-e583-49f2-b846-cccdd0dff70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Script\DoomCutting">
+      <UniqueIdentifier>{f6558051-628a-46d7-be6f-f12ddc011759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle\Fragment">
+      <UniqueIdentifier>{ca0673fb-dae5-4812-ae57-3652ff84da01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -243,6 +255,18 @@
     <ClCompile Include="Twinkle.cpp">
       <Filter>Particle\Twinkle</Filter>
     </ClCompile>
+    <ClCompile Include="ArrowEffect.cpp">
+      <Filter>Particle\ArrowEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="CutEffect.cpp">
+      <Filter>Particle\Cut</Filter>
+    </ClCompile>
+    <ClCompile Include="DoomCutting.cpp">
+      <Filter>Component\Script\DoomCutting</Filter>
+    </ClCompile>
+    <ClCompile Include="Fragment.cpp">
+      <Filter>Particle\Fragment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -339,6 +363,18 @@
     </ClInclude>
     <ClInclude Include="Twinkle.h">
       <Filter>Particle\Twinkle</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrowEffect.h">
+      <Filter>Particle\ArrowEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="CutEffect.h">
+      <Filter>Particle\Cut</Filter>
+    </ClInclude>
+    <ClInclude Include="DoomCutting.h">
+      <Filter>Component\Script\DoomCutting</Filter>
+    </ClInclude>
+    <ClInclude Include="Fragment.h">
+      <Filter>Particle\Fragment</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

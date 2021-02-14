@@ -28,6 +28,20 @@ void ParticleRenderer::Render()
 	IMAGE->Render(Image, m_RenderingForm);
 }
 
+void ParticleRenderer::Render(RECT rect)
+{
+	m_RenderingForm =
+	{
+		m_Transform->Position,
+		m_Transform->Scale,
+		m_Transform->Rotation,
+		m_Transform->Depth,
+
+		Pivot, Color, IsVlew
+	};
+	IMAGE->RenderRect(Image, m_RenderingForm, rect);
+}
+
 void ParticleRenderer::Release()
 {
 }

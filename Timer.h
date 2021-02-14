@@ -11,6 +11,7 @@ public:
 
 	void Update();
 	bool IsOver();
+	bool IsCompletelyOver();
 
 	float TimePercent();
 	float InvokePercent();

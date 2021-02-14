@@ -56,6 +56,7 @@ enum Tag
 #include "ParticleManager.h"
 #include "Twinkle.h"
 #include "Mostima.h"
+#include "ArrowEffect.h"
 #include "Object.h"
 #include "ObjectManager.h"
 
@@ -67,3 +68,4 @@ enum Tag
 #include "Animator.h"
 #include "Playable.h"
 #include "MostimaBoom.h"
+#include "DoomCutting.h"

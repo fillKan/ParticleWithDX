@@ -13,7 +13,12 @@ float Math::Random(float min, float max)
 
 float Math::Random()
 {
-	return Random(-1.0f, 1.0f);
+	return Random(0.0f, 1.0f) - Random(0.0f, 1.0f);
+}
+
+float Math::RandomRadian()
+{
+	return D3DXToRadian(Random(0, 360));
 }
 
 float Math::Sign(float value)
@@ -28,6 +33,11 @@ float Math::Clamp(float value, float min, float max)
 	if (value > max) return max;
 	if (value < min) return min;
 	return value;
+}
+
+Vector2 Math::Normalize(Vector2 vector)
+{
+	return vector / D3DXVec2Length(&vector);
 }
 
 Vector2 Math::Rotate(Vector2 vector, float rot)
@@ -65,6 +75,11 @@ void Math::SetAlpha(D3DCOLOR& color, float alpha)
 }
 
 Vector2 Math::Lerp(Vector2 a, Vector2 b, float ratio)
+{
+	return (b * ratio) + (a * (1 - ratio));
+}
+
+float Math::Lerp(float a, float b, float ratio)
 {
 	return (b * ratio) + (a * (1 - ratio));
 }
